@@ -30,10 +30,8 @@ likeBtn.addEventListener('click', () => {
   mimicServerCall()
     .then(() => heartChange())
     .catch(
-      () => errorMessage.removeAttribute('hidden'),
-      setTimeout(() => {
-        errorMessage.setAttribute('hidden', true);
-      }, 3000)
+      () => errorMessage.classList.remove('hidden'),
+      setTimeout(() => errorMessage.classList.add('hidden'), 3000)
     );
 });
 
